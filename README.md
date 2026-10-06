@@ -1,30 +1,36 @@
-# Neovim + LazyVim Installer
+# Linux Tools Install Scripts
 
-Simple installer for Neovim and LazyVim on Ubuntu.
+A collection of installer scripts for Linux tools (tested on Ubuntu).
 
-## Installation
+## Available installers
 
-Make the script executable:
+| Tool | Description | Script |
+| ---- | ----------- | ------ |
+| [LazyVim](installers/lazyvim) | Latest Neovim + LazyVim starter config | `installers/lazyvim/install.sh` |
 
-```bash
-chmod +x install-lazyvim.sh
-```
-
-Run the script:
+## Usage
 
 ```bash
-./install-lazyvim.sh
+git clone <this-repo-url>
+cd linux-tools-install-script
+./installers/<tool>/install.sh
 ```
 
-Then start Neovim:
+See each installer's `README.md` for details.
 
-```bash
-nvim
+## Repository structure
+
+```
+.
+├── README.md
+└── installers/
+    └── lazyvim/
+        ├── install.sh
+        └── README.md
 ```
 
-If `nvim` is not found:
+## Adding a new installer
 
-```bash
-source ~/.bashrc
-nvim
-```
+1. Create `installers/<tool>/` with an `install.sh` and a `README.md`.
+2. Make it executable: `chmod +x installers/<tool>/install.sh`
+3. Add a row to the **Available installers** table above.
